@@ -16,15 +16,15 @@ const array1 = [
         completed: false
     }
 ];
-const arraysBaseInConditions = (elements) => {
+const arraysBaseInConditions = (elements, id) => {
     elements.forEach(element => {
-        if(element.id === 2){
+        if(element.id === id){
             element.completed = true
         };
     });;
     return elements;
 };
-console.log(arraysBaseInConditions(array1));
+console.log(arraysBaseInConditions(array1, 1));
 
 //2.
 const array2 = [
@@ -44,7 +44,7 @@ const array2 = [
 const maxValueObject = () => {
     let counter = array2[0];
     array2.forEach(element => {
-        if(counter.population > element.population){
+        if(counter.population < element.population){
             counter = element
         } 
     })
